@@ -12,7 +12,7 @@ git clone https://github.com/ldc84/kakaopay2020-homework-1.git
 Navigate to the folder:
 
 ```bash
-cd encoreseoul2020
+cd kakaopay2020-homework-1
 ```
 
 Install dependencies:
