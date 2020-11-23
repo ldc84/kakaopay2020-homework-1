@@ -32,7 +32,16 @@
     }
   }
   .fire {
-    
+    > span {
+      opacity: 0;
+    }
+    &.active {
+      > span {
+        opacity: 1;
+        transition:all .3s ease-in-out;
+        transition-delay: 1s;
+      }
+    }
   }
 
   @keyframes naonTextIn {
@@ -87,11 +96,17 @@
     bottom:-3%;
     left:20.1%;
     width:13.2%;
+    animation-name: handLeft;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
   }
   .hand-rig {
     bottom:6%;
     right:19.2%;
     width:13.866%;
+    animation-name: handRight;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
   }
 
   @keyframes moneyBounce {
@@ -126,6 +141,44 @@
     }
     90% {
       transform: scale(1);
+    }
+  }
+  @keyframes handLeft {
+    0% {
+      margin-left:0;
+    }
+    20% {
+      margin-left:-10px;
+      transform: rotate(-20deg);
+    }
+    40% {
+      margin-left:0;
+    }
+    60% {
+      margin-left:-10px;
+      transform: rotate(-20deg);
+    }
+    90% {
+      margin-left:0;
+    }
+  }
+  @keyframes handRight {
+    0% {
+      margin-right:0;
+    }
+    20% {
+      margin-right:-10px;
+      transform: rotate(20deg);
+    }
+    40% {
+      margin-right:0;
+    }
+    60% {
+      margin-right:-10px;
+      transform: rotate(20deg);
+    }
+    90% {
+      margin-right:0;
     }
   }
 }
@@ -318,11 +371,13 @@
       &.top {
         top:0;
         animation-duration: 1s;
+        animation-delay: .1s;
         animation-name: bounceTop;
       }
       &.foot {
         bottom:0;
         animation-duration: 1s;
+        animation-delay: .1s;
         animation-name: bounceFoot;
         .btn-send {
           bottom:0;

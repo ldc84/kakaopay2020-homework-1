@@ -4,8 +4,10 @@
   $(function(){
     const win = $(window);
     const coinArea = $('.coin-area');
+    const fire = $('.naon-text-1 .fire');
 
     coinArea.addClass('load');
+    fire.addClass('active');
 
     win.on('scroll', function(){
       const winT = $(this).scrollTop();
@@ -36,5 +38,15 @@
       return false;
     })
   });
+
+  // 송금하기
+  $(function(){
+    const btnSend = $('.btn-send');
+    btnSend.on('click', function(){
+      alert('송금이 완료되었습니다.');
+      $('.layer-box > div.top .close').trigger('click');
+      return false;
+    });
+  })
 
 })(jQuery);
