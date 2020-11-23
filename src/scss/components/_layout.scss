@@ -1,0 +1,28 @@
+// CSS Grid layout
+// body
+body {
+  background:#241911 url("../images/body_bg.png") no-repeat center top;
+  background-size:100% auto;
+  background-attachment: fixed;
+}
+
+
+// wrap
+#wrap {
+  position:relative;
+  padding-bottom:80px;
+  overflow: hidden;
+}
+
+// header
+#header {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  h1 {
+    img {
+      width:100%;
+    }
+  }
+}
